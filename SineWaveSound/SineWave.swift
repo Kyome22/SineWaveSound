@@ -16,31 +16,32 @@ class SineWave {
         case out
     }
 
-    var volume: Float = 0
-    var hz: Float = 0
+    var volume: Float = 0.1 {
+        didSet { updateBuffers() }
+    }
+    var hz: Float = 600 {
+        didSet { updateBuffers() }
+    }
 
     private let audioEngine = AVAudioEngine()
     private let player = AVAudioPlayerNode()
     private var buffer: AVAudioPCMBuffer!
     private var fadeInBuffer: AVAudioPCMBuffer!
     private var fadeOutBuffer: AVAudioPCMBuffer!
+    private let semaphore = DispatchSemaphore(value: 0)
 
     init(volume: Float = 0.1, hz: Float = 600) {
         self.volume = volume
         self.hz = hz
-
-        buffer = makeBuffer()
-        fadeInBuffer = makeBuffer(fade: .in)
-        fadeOutBuffer = makeBuffer(fade: .out)
-
         let audioFormat = player.outputFormat(forBus: 0)
+        updateBuffers()
         audioEngine.attach(player)
         audioEngine.connect(player, to: audioEngine.mainMixerNode, format: audioFormat)
         audioEngine.prepare()
         do {
-            try audioEngine.start()
+            try self.audioEngine.start()
         } catch {
-            logput(error.localizedDescription)
+            logput(error)
         }
     }
 
@@ -48,11 +49,17 @@ class SineWave {
         stopEngine()
     }
 
+    private func updateBuffers() {
+        buffer = makeBuffer()
+        fadeInBuffer = makeBuffer(fade: .in)
+        fadeOutBuffer = makeBuffer(fade: .out)
+    }
+
     private func makeBuffer(fade: Fade = .none) -> AVAudioPCMBuffer {
         let audioFormat = player.outputFormat(forBus: 0)
         let sampleRate = Float(audioFormat.sampleRate) // 44100.0
         let length = AVAudioFrameCount(sampleRate / hz)
-        let capacity = fade == .none ? length : 20 * length
+        let capacity = fade == .none ? length : 15 * length
         guard let buf = AVAudioPCMBuffer(pcmFormat: audioFormat, frameCapacity: capacity) else {
             fatalError("Error initializing AVAudioPCMBuffer")
         }
@@ -73,35 +80,46 @@ class SineWave {
     }
 
     func play() {
-        if audioEngine.isRunning {
-            player.volume = 1.0
-            player.scheduleBuffer(fadeInBuffer, at: nil, options: .interrupts, completionHandler: nil)
-            player.scheduleBuffer(buffer, at: nil, options: .loops, completionHandler: nil)
+        if audioEngine.isRunning && !player.isPlaying {
             player.play()
+            player.scheduleBuffer(fadeInBuffer, completionHandler: { [weak self] in
+                self?.semaphore.signal()
+            })
+            player.scheduleBuffer(buffer, at: nil, options: .loops, completionHandler: nil)
         }
     }
 
     func pause() {
         if player.isPlaying {
-            player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: {
-                self.player.pause()
-            })
-            player.play()
+            switch semaphore.wait(timeout: .now() + 0.1) {
+            case .success:
+                player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: { [weak self] in
+                    self?.player.pause()
+                })
+            case .timedOut:
+                break
+            }
         }
     }
 
     func stop() {
         if player.isPlaying {
-            player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: {
-                self.player.stop()
-            })
-            player.play()
+            switch semaphore.wait(timeout: .now() + 0.1) {
+            case .success:
+                player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: { [weak self] in
+                    self?.player.pause()
+                })
+            case .timedOut:
+                break
+            }
         }
     }
 
     func stopEngine() {
         stop()
         if audioEngine.isRunning {
+            audioEngine.disconnectNodeOutput(player)
+            audioEngine.detach(player)
             audioEngine.stop()
         }
     }

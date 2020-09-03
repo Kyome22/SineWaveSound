@@ -59,7 +59,7 @@ class ViewController: NSViewController {
 
     @IBAction func changeHz(_ sender: NSSlider) {
         let value = Float(400 + 50 * sender.integerValue)
-        sender.floatValue = value
+        sender.floatValue = Float(sender.integerValue)
         sineWave?.hz = value
         hzLabel.stringValue = String(format: "%.1f", value)
     }

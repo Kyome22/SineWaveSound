@@ -38,7 +38,7 @@ class ViewController: NSViewController {
 
     func setUI() {
         samplerButton.title = "Sampler"
-        sineWaveButton.title = "Size Wave"
+        sineWaveButton.title = "Sine Wave"
 
         volumeSlider.minValue = 0.0
         volumeSlider.maxValue = 1.0

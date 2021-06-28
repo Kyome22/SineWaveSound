@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -738,7 +739,7 @@
                                     <gridCell row="8Ei-vw-Pdf" column="h42-W6-CgN" id="BDZ-mo-4cq">
                                         <slider key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vef-EK-a0F">
                                             <rect key="frame" x="56" y="29" width="138" height="19"/>
-                                            <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.10000000000000001" tickMarkPosition="above" sliderType="linear" id="rOS-7E-b4g"/>
+                                            <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="1" doubleValue="0.10000000000000001" tickMarkPosition="above" sliderType="linear" id="rOS-7E-b4g"/>
                                             <connections>
                                                 <action selector="changeVolume:" target="XfG-lQ-9wD" id="OmJ-MB-hpB"/>
                                             </connections>
@@ -767,7 +768,7 @@
                                     <gridCell row="O5F-RB-0FY" column="h42-W6-CgN" id="aTq-VH-PgF">
                                         <slider key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ebv-xE-jbA">
                                             <rect key="frame" x="56" y="-2" width="138" height="19"/>
-                                            <sliderCell key="cell" state="on" alignment="left" maxValue="12" doubleValue="4" tickMarkPosition="above" sliderType="linear" id="9wY-oN-608"/>
+                                            <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="12" doubleValue="4" tickMarkPosition="above" sliderType="linear" id="9wY-oN-608"/>
                                             <connections>
                                                 <action selector="changeHz:" target="XfG-lQ-9wD" id="6FR-ne-3Wd"/>
                                             </connections>

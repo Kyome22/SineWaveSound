@@ -34,11 +34,11 @@ struct ContentView: View {
                 .padding(.bottom, 20)
             Text("Hz: \(Int(currentHz), specifier: "%d")")
             Slider(value: $currentHz,
-                   in: 400 ... 950,
-                   step: 50,
+                   in: 400 ... 990,
+                   step: 10,
                    onEditingChanged: changedHz,
                    minimumValueLabel: MonoText("400"),
-                   maximumValueLabel: MonoText("950")) {
+                   maximumValueLabel: MonoText("990")) {
                 EmptyView()
             }
         }

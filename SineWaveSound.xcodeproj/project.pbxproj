@@ -7,32 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1CC1E1B424DEFA5E0048E854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1B324DEFA5E0048E854 /* AppDelegate.swift */; };
-		1CC1E1B624DEFA5E0048E854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1B524DEFA5E0048E854 /* ViewController.swift */; };
-		1CC1E1B824DEFA5F0048E854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC1E1B724DEFA5F0048E854 /* Assets.xcassets */; };
-		1CC1E1BB24DEFA5F0048E854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC1E1B924DEFA5F0048E854 /* Main.storyboard */; };
-		1CC1E1C424DEFA6A0048E854 /* SineWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1C324DEFA6A0048E854 /* SineWave.swift */; };
-		1CC1E1C624DEFADD0048E854 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1C524DEFADD0048E854 /* Extensions.swift */; };
-		1CC1E1C824DEFEF00048E854 /* SoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1C724DEFEF00048E854 /* SoundButton.swift */; };
-		1CC1E1CA24DF04A80048E854 /* Sampler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC1E1C924DF04A80048E854 /* Sampler.swift */; };
+		1CB7E8552689A656004957C2 /* SineWaveSoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */; };
+		1CB7E8572689A656004957C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7E8562689A656004957C2 /* ContentView.swift */; };
+		1CB7E8592689A657004957C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB7E8582689A657004957C2 /* Assets.xcassets */; };
+		1CB7E85C2689A657004957C2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB7E85B2689A657004957C2 /* Preview Assets.xcassets */; };
+		1CB7E8642689A679004957C2 /* SineWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7E8632689A679004957C2 /* SineWave.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1CC1E1B024DEFA5E0048E854 /* SineWaveSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SineWaveSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1CC1E1B324DEFA5E0048E854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1CC1E1B524DEFA5E0048E854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1CC1E1B724DEFA5F0048E854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1CC1E1BA24DEFA5F0048E854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1CC1E1BC24DEFA5F0048E854 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1CC1E1BD24DEFA5F0048E854 /* SineWaveSound.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SineWaveSound.entitlements; sourceTree = "<group>"; };
-		1CC1E1C324DEFA6A0048E854 /* SineWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWave.swift; sourceTree = "<group>"; };
-		1CC1E1C524DEFADD0048E854 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		1CC1E1C724DEFEF00048E854 /* SoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundButton.swift; sourceTree = "<group>"; };
-		1CC1E1C924DF04A80048E854 /* Sampler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sampler.swift; sourceTree = "<group>"; };
+		1CB7E8512689A656004957C2 /* SineWaveSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SineWaveSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWaveSoundApp.swift; sourceTree = "<group>"; };
+		1CB7E8562689A656004957C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1CB7E8582689A657004957C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CB7E85B2689A657004957C2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1CB7E85D2689A657004957C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CB7E8632689A679004957C2 /* SineWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWave.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1CC1E1AD24DEFA5E0048E854 /* Frameworks */ = {
+		1CB7E84E2689A656004957C2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,49 +35,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1CC1E1A724DEFA5E0048E854 = {
+		1CB7E8482689A656004957C2 = {
 			isa = PBXGroup;
 			children = (
-				1CC1E1B224DEFA5E0048E854 /* SineWaveSound */,
-				1CC1E1B124DEFA5E0048E854 /* Products */,
+				1CB7E8532689A656004957C2 /* SineWaveSound */,
+				1CB7E8522689A656004957C2 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1CC1E1B124DEFA5E0048E854 /* Products */ = {
+		1CB7E8522689A656004957C2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1CC1E1B024DEFA5E0048E854 /* SineWaveSound.app */,
+				1CB7E8512689A656004957C2 /* SineWaveSound.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1CC1E1B224DEFA5E0048E854 /* SineWaveSound */ = {
+		1CB7E8532689A656004957C2 /* SineWaveSound */ = {
 			isa = PBXGroup;
 			children = (
-				1CC1E1B324DEFA5E0048E854 /* AppDelegate.swift */,
-				1CC1E1C524DEFADD0048E854 /* Extensions.swift */,
-				1CC1E1B524DEFA5E0048E854 /* ViewController.swift */,
-				1CC1E1C724DEFEF00048E854 /* SoundButton.swift */,
-				1CC1E1C324DEFA6A0048E854 /* SineWave.swift */,
-				1CC1E1C924DF04A80048E854 /* Sampler.swift */,
-				1CC1E1B724DEFA5F0048E854 /* Assets.xcassets */,
-				1CC1E1B924DEFA5F0048E854 /* Main.storyboard */,
-				1CC1E1BC24DEFA5F0048E854 /* Info.plist */,
-				1CC1E1BD24DEFA5F0048E854 /* SineWaveSound.entitlements */,
+				1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */,
+				1CB7E8562689A656004957C2 /* ContentView.swift */,
+				1CB7E8632689A679004957C2 /* SineWave.swift */,
+				1CB7E8582689A657004957C2 /* Assets.xcassets */,
+				1CB7E85D2689A657004957C2 /* Info.plist */,
+				1CB7E85A2689A657004957C2 /* Preview Content */,
 			);
 			path = SineWaveSound;
+			sourceTree = "<group>";
+		};
+		1CB7E85A2689A657004957C2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CB7E85B2689A657004957C2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1CC1E1AF24DEFA5E0048E854 /* SineWaveSound */ = {
+		1CB7E8502689A656004957C2 /* SineWaveSound */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CC1E1C024DEFA5F0048E854 /* Build configuration list for PBXNativeTarget "SineWaveSound" */;
+			buildConfigurationList = 1CB7E8602689A657004957C2 /* Build configuration list for PBXNativeTarget "SineWaveSound" */;
 			buildPhases = (
-				1CC1E1AC24DEFA5E0048E854 /* Sources */,
-				1CC1E1AD24DEFA5E0048E854 /* Frameworks */,
-				1CC1E1AE24DEFA5E0048E854 /* Resources */,
+				1CB7E84D2689A656004957C2 /* Sources */,
+				1CB7E84E2689A656004957C2 /* Frameworks */,
+				1CB7E84F2689A656004957C2 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -92,25 +89,24 @@
 			);
 			name = SineWaveSound;
 			productName = SineWaveSound;
-			productReference = 1CC1E1B024DEFA5E0048E854 /* SineWaveSound.app */;
+			productReference = 1CB7E8512689A656004957C2 /* SineWaveSound.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1CC1E1A824DEFA5E0048E854 /* Project object */ = {
+		1CB7E8492689A656004957C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1160;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
-				ORGANIZATIONNAME = "Takuto Nakamura";
 				TargetAttributes = {
-					1CC1E1AF24DEFA5E0048E854 = {
-						CreatedOnToolsVersion = 11.6;
+					1CB7E8502689A656004957C2 = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 1CC1E1AB24DEFA5E0048E854 /* Build configuration list for PBXProject "SineWaveSound" */;
+			buildConfigurationList = 1CB7E84C2689A656004957C2 /* Build configuration list for PBXProject "SineWaveSound" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,57 +114,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 1CC1E1A724DEFA5E0048E854;
-			productRefGroup = 1CC1E1B124DEFA5E0048E854 /* Products */;
+			mainGroup = 1CB7E8482689A656004957C2;
+			productRefGroup = 1CB7E8522689A656004957C2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1CC1E1AF24DEFA5E0048E854 /* SineWaveSound */,
+				1CB7E8502689A656004957C2 /* SineWaveSound */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1CC1E1AE24DEFA5E0048E854 /* Resources */ = {
+		1CB7E84F2689A656004957C2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC1E1B824DEFA5F0048E854 /* Assets.xcassets in Resources */,
-				1CC1E1BB24DEFA5F0048E854 /* Main.storyboard in Resources */,
+				1CB7E85C2689A657004957C2 /* Preview Assets.xcassets in Resources */,
+				1CB7E8592689A657004957C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1CC1E1AC24DEFA5E0048E854 /* Sources */ = {
+		1CB7E84D2689A656004957C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CC1E1C424DEFA6A0048E854 /* SineWave.swift in Sources */,
-				1CC1E1B624DEFA5E0048E854 /* ViewController.swift in Sources */,
-				1CC1E1B424DEFA5E0048E854 /* AppDelegate.swift in Sources */,
-				1CC1E1C824DEFEF00048E854 /* SoundButton.swift in Sources */,
-				1CC1E1C624DEFADD0048E854 /* Extensions.swift in Sources */,
-				1CC1E1CA24DF04A80048E854 /* Sampler.swift in Sources */,
+				1CB7E8642689A679004957C2 /* SineWave.swift in Sources */,
+				1CB7E8572689A656004957C2 /* ContentView.swift in Sources */,
+				1CB7E8552689A656004957C2 /* SineWaveSoundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		1CC1E1B924DEFA5F0048E854 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1CC1E1BA24DEFA5F0048E854 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		1CC1E1BE24DEFA5F0048E854 /* Debug */ = {
+		1CB7E85E2689A657004957C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,17 +201,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		1CC1E1BF24DEFA5F0048E854 /* Release */ = {
+		1CB7E85F2689A657004957C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,79 +256,84 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		1CC1E1C124DEFA5F0048E854 /* Debug */ = {
+		1CB7E8612689A657004957C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SineWaveSound/SineWaveSound.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_ASSET_PATHS = "\"SineWaveSound/Preview Content\"";
 				DEVELOPMENT_TEAM = VJ5N2X84K8;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SineWaveSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyome.SineWaveSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		1CC1E1C224DEFA5F0048E854 /* Release */ = {
+		1CB7E8622689A657004957C2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SineWaveSound/SineWaveSound.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0;
+				DEVELOPMENT_ASSET_PATHS = "\"SineWaveSound/Preview Content\"";
 				DEVELOPMENT_TEAM = VJ5N2X84K8;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SineWaveSound/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyome.SineWaveSound;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1CC1E1AB24DEFA5E0048E854 /* Build configuration list for PBXProject "SineWaveSound" */ = {
+		1CB7E84C2689A656004957C2 /* Build configuration list for PBXProject "SineWaveSound" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CC1E1BE24DEFA5F0048E854 /* Debug */,
-				1CC1E1BF24DEFA5F0048E854 /* Release */,
+				1CB7E85E2689A657004957C2 /* Debug */,
+				1CB7E85F2689A657004957C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CC1E1C024DEFA5F0048E854 /* Build configuration list for PBXNativeTarget "SineWaveSound" */ = {
+		1CB7E8602689A657004957C2 /* Build configuration list for PBXNativeTarget "SineWaveSound" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1CC1E1C124DEFA5F0048E854 /* Debug */,
-				1CC1E1C224DEFA5F0048E854 /* Release */,
+				1CB7E8612689A657004957C2 /* Debug */,
+				1CB7E8622689A657004957C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1CC1E1A824DEFA5E0048E854 /* Project object */;
+	rootObject = 1CB7E8492689A656004957C2 /* Project object */;
 }

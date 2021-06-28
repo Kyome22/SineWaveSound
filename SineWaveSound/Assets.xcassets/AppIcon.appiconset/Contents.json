@@ -1,54 +1,58 @@
 {
   "images" : [
     {
-      "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "16x16"
-    },
-    {
-      "idiom" : "mac",
+      "filename" : "Icon-Notification@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "16x16"
+      "size" : "20x20"
     },
     {
-      "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "32x32"
+      "filename" : "Icon-Notification@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "20x20"
     },
     {
-      "idiom" : "mac",
+      "filename" : "Icon-Small@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "32x32"
+      "size" : "29x29"
     },
     {
-      "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "128x128"
+      "filename" : "Icon-Small@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "29x29"
     },
     {
-      "idiom" : "mac",
+      "filename" : "Icon-Small-40@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "128x128"
+      "size" : "40x40"
     },
     {
-      "idiom" : "mac",
-      "scale" : "1x",
-      "size" : "256x256"
+      "filename" : "Icon-Small-40@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "40x40"
     },
     {
-      "idiom" : "mac",
+      "filename" : "Icon-60@2x.png",
+      "idiom" : "iphone",
       "scale" : "2x",
-      "size" : "256x256"
+      "size" : "60x60"
     },
     {
-      "idiom" : "mac",
+      "filename" : "Icon-60@3x.png",
+      "idiom" : "iphone",
+      "scale" : "3x",
+      "size" : "60x60"
+    },
+    {
+      "filename" : "icon.png",
+      "idiom" : "ios-marketing",
       "scale" : "1x",
-      "size" : "512x512"
-    },
-    {
-      "idiom" : "mac",
-      "scale" : "2x",
-      "size" : "512x512"
+      "size" : "1024x1024"
     }
   ],
   "info" : {

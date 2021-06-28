@@ -2,34 +2,34 @@
 //  SineWave.swift
 //  SineWaveSound
 //
-//  Created by Takuto Nakamura on 2020/08/09.
-//  Copyright © 2020 Takuto Nakamura. All rights reserved.
+//  Created by Takuto Nakamura on 2021/06/28.
 //
 
 import AVFoundation
 
 class SineWave {
-
+    
     private enum Fade {
         case none
         case `in`
         case out
     }
-
-    var volume: Float = 0.1 {
-        didSet { updateBuffers() }
-    }
-    var hz: Float = 600 {
-        didSet { updateBuffers() }
-    }
-
+    
     private let audioEngine = AVAudioEngine()
     private let player = AVAudioPlayerNode()
     private var buffer: AVAudioPCMBuffer!
     private var fadeInBuffer: AVAudioPCMBuffer!
     private var fadeOutBuffer: AVAudioPCMBuffer!
     private let semaphore = DispatchSemaphore(value: 0)
-
+    
+    var volume: Float = 0.1 {
+        didSet { updateBuffers() }
+    }
+    
+    var hz: Float = 600 {
+        didSet { updateBuffers() }
+    }
+    
     init(volume: Float = 0.1, hz: Float = 600) {
         self.volume = volume
         self.hz = hz
@@ -41,20 +41,20 @@ class SineWave {
         do {
             try self.audioEngine.start()
         } catch {
-            logput(error)
+            print(error.localizedDescription)
         }
     }
-
+    
     deinit {
         stopEngine()
     }
-
+    
     private func updateBuffers() {
         buffer = makeBuffer()
         fadeInBuffer = makeBuffer(fade: .in)
         fadeOutBuffer = makeBuffer(fade: .out)
     }
-
+    
     private func makeBuffer(fade: Fade = .none) -> AVAudioPCMBuffer {
         let audioFormat = player.outputFormat(forBus: 0)
         let sampleRate = Float(audioFormat.sampleRate) // 44100.0
@@ -78,50 +78,40 @@ class SineWave {
         }
         return buf
     }
-
+    
     func play() {
         if audioEngine.isRunning && !player.isPlaying {
             player.play()
-            player.scheduleBuffer(fadeInBuffer, completionHandler: { [weak self] in
+            player.scheduleBuffer(fadeInBuffer) { [weak self] in
                 self?.semaphore.signal()
-            })
-            player.scheduleBuffer(buffer, at: nil, options: .loops, completionHandler: nil)
+            }
+            player.scheduleBuffer(buffer, at: nil, options: .loops)
         }
     }
-
+    
     func pause() {
         if player.isPlaying {
             switch semaphore.wait(timeout: .now() + 0.1) {
             case .success:
-                player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: { [weak self] in
-                    self?.player.pause()
-                })
+                player.scheduleBuffer(fadeOutBuffer, at: nil,
+                                      options: .interruptsAtLoop,
+                                      completionHandler: { [weak self] in
+                                        self?.player.pause()
+                                      })
             case .timedOut:
                 break
             }
         }
     }
-
-    func stop() {
-        if player.isPlaying {
-            switch semaphore.wait(timeout: .now() + 0.1) {
-            case .success:
-                player.scheduleBuffer(fadeOutBuffer, at: nil, options: .interruptsAtLoop, completionHandler: { [weak self] in
-                    self?.player.pause()
-                })
-            case .timedOut:
-                break
-            }
-        }
-    }
-
+    
     func stopEngine() {
-        stop()
+        pause()
         if audioEngine.isRunning {
             audioEngine.disconnectNodeOutput(player)
             audioEngine.detach(player)
             audioEngine.stop()
         }
     }
-
+    
 }
+

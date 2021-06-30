@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var isDragging: Bool = false
+    @State var isTouching: Bool = false
     @State var currentVolume: Float = 0.1
     @State var currentHz: Float = 600
     
     let sinewave = SineWave()
+    let rect = CGRect(origin: .zero, size: CGSize(width: 240, height: 160))
     
     var body: some View {
         VStack {
+            Waves(touching: $isTouching)
+                .frame(height: 45)
+                .padding(.bottom, 30)
             Text("Play Sine Wave")
-                .frame(width: 200, height: 50)
-                .foregroundColor(isDragging ? Color.gray : Color.white)
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(width: rect.width, height: rect.height)
+                .foregroundColor(isTouching ? Color.gray : Color.white)
                 .background(Color.blue)
-                .cornerRadius(25)
+                .opacity(isTouching ? 0.8 : 1.0)
+                .clipShape(SuperEllipseShape(rate: 0.75))
                 .gesture(drag)
                 .padding(.bottom, 50)
             Text("Volume: \(currentVolume, specifier: "%0.1f")")
@@ -38,9 +45,8 @@ struct ContentView: View {
                    step: 10,
                    onEditingChanged: changedHz,
                    minimumValueLabel: MonoText("400"),
-                   maximumValueLabel: MonoText("990")) {
-                EmptyView()
-            }
+                   maximumValueLabel: MonoText("990"),
+                   label: { EmptyView() })
         }
         .padding(20)
     }
@@ -48,16 +54,21 @@ struct ContentView: View {
     var drag: some Gesture {
         DragGesture(minimumDistance: 0.0)
             .onChanged({ drag in
-                if !isDragging {
-                    sinewave.play()
+                if rect.contains(drag.location) {
+                    if !isTouching {
+                        sinewave.play()
+                        isTouching = true
+                    }
+                } else if isTouching {
+                    sinewave.pause()
+                    isTouching = false
                 }
-                isDragging = true
             })
             .onEnded({ _ in
-                if isDragging {
+                if isTouching {
                     sinewave.pause()
+                    isTouching = false
                 }
-                isDragging = false
             })
     }
     

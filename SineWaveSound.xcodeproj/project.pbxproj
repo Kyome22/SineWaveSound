@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C9C52B8268C65C4000C0A8A /* Waves.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C52B7268C65C4000C0A8A /* Waves.swift */; };
+		1C9C52BA268CBB56000C0A8A /* SuperEllipseShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9C52B9268CBB56000C0A8A /* SuperEllipseShape.swift */; };
 		1CB7E8552689A656004957C2 /* SineWaveSoundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */; };
 		1CB7E8572689A656004957C2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB7E8562689A656004957C2 /* ContentView.swift */; };
 		1CB7E8592689A657004957C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CB7E8582689A657004957C2 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C9C52B7268C65C4000C0A8A /* Waves.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waves.swift; sourceTree = "<group>"; };
+		1C9C52B9268CBB56000C0A8A /* SuperEllipseShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperEllipseShape.swift; sourceTree = "<group>"; };
 		1CB7E8512689A656004957C2 /* SineWaveSound.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SineWaveSound.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineWaveSoundApp.swift; sourceTree = "<group>"; };
 		1CB7E8562689A656004957C2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 			children = (
 				1CB7E8542689A656004957C2 /* SineWaveSoundApp.swift */,
 				1CB7E8562689A656004957C2 /* ContentView.swift */,
+				1C9C52B9268CBB56000C0A8A /* SuperEllipseShape.swift */,
+				1C9C52B7268C65C4000C0A8A /* Waves.swift */,
 				1CB7E8632689A679004957C2 /* SineWave.swift */,
 				1CB7E8582689A657004957C2 /* Assets.xcassets */,
 				1CB7E85D2689A657004957C2 /* Info.plist */,
@@ -143,6 +149,8 @@
 			files = (
 				1CB7E8642689A679004957C2 /* SineWave.swift in Sources */,
 				1CB7E8572689A656004957C2 /* ContentView.swift in Sources */,
+				1C9C52BA268CBB56000C0A8A /* SuperEllipseShape.swift in Sources */,
+				1C9C52B8268C65C4000C0A8A /* Waves.swift in Sources */,
 				1CB7E8552689A656004957C2 /* SineWaveSoundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

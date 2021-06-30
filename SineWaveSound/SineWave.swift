@@ -33,6 +33,11 @@ class SineWave {
     init(volume: Float = 0.1, hz: Float = 600) {
         self.volume = volume
         self.hz = hz
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+        } catch {
+            print(error.localizedDescription)
+        }
         let audioFormat = player.outputFormat(forBus: 0)
         updateBuffers()
         audioEngine.attach(player)
